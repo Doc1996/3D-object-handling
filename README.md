@@ -1,7 +1,9 @@
 # 3D Object Handling
 
 <br>
-<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project integrates a system for intelligent robotic handling of food products, based on collecting their images and point clouds, detection in images by a neural network, determining spatial position and planning and realizing grasping based on geometry. The images and point clouds used are collected by an Intel RealSense D435 3D vision system mounted on a Universal Robots UR5 collaborative robot, with an eye-in-hand calibration of the 3D vision system against his gripper. The YOLO v5 neural network, trained on a specially designed set of annotated images is used to detect the product in images, while the Open3D library for point cloud processing is used to determine the spatial position of the product. The Principal component analysis (PCA) algorithm is used as the basis for planning of product grasping. The listed elements of the system are connected by a graphical user interface, while the communication between the robot and computer is realized by the TCP/IP protocol.</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project integrates a system for intelligent robotic handling of food products, based on collecting their images and point clouds, detection in images by a neural network, determining spatial position and planning and realizing grasping based on geometry. The images and point clouds used are collected by an Intel RealSense D435 3D vision system mounted on a Universal Robots UR5 collaborative robot, with an eye-in-hand calibration of the 3D vision system against his gripper. The YOLO v5 neural network, trained on a specially designed set of annotated images is used to detect the product in images, while the Open3D library for point cloud processing is used to determine the spatial position of the product. The Principal component analysis (PCA) algorithm is used as the basis for planning of product grasping. The listed elements of the system are connected by a graphical user interface, while the communication between the robot and computer is realized by the TCP/IP protocol.</p>
+
 <br>
 
 
