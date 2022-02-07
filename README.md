@@ -64,8 +64,9 @@
 
 <b>Step 1.</b>&nbsp;&nbsp;Clone the repository:
 <pre>
-git clone https://github.com/Doc1996/3D-object-handling"
+git clone https://github.com/Doc1996/3D-object-handling
 </pre>
+<br>
 
 <b>Step 2.</b>&nbsp;&nbsp;Create the virtual environment and install dependencies:
 <pre>
@@ -79,13 +80,19 @@ python -m ipykernel install --user --name=3D-object-handling
 
 .\3D-object-handling\WINDOWS_INSTALLING_PACKAGES.bat
 </pre>
+<br>
 
-<b>Step 3.</b>&nbsp;&nbsp;Run the program:
+<b>Step 3.</b>&nbsp;&nbsp;Modify the changeable variables in <i>RS_and_3D_OD_constants.py</i>
+<br>
+<br>
+
+<b>Step 4.</b>&nbsp;&nbsp;Run the program:
 <pre>
 .\3D-object-handling\Scripts\activate  &:: activate the virtual environment on Windows
 
 .\3D-object-handling\WINDOWS_3D_OBJECT_HANDLING_APPLICATION.bat
 </pre>
+<br>
 
 <b>Optional step</b>&nbsp;&nbsp;Run the prototyping program with Jupyter Notebook:
 <pre>
@@ -95,7 +102,6 @@ jupyter notebook 3D-object-handling\RS_and_3D_OD_prototypes.ipynb
 :: set the vitrual environment kernel: "Kernel" -> "Change kernel" -> "3D-object-handling"
 :: run cells one after another
 </pre>
-
 <br>
 
 
@@ -105,8 +111,9 @@ jupyter notebook 3D-object-handling\RS_and_3D_OD_prototypes.ipynb
 
 <b>Step 1.</b>&nbsp;&nbsp;Clone the repository:
 <pre>
-git clone https://github.com/Doc1996/3D-object-handling"
+git clone https://github.com/Doc1996/3D-object-handling
 </pre>
+<br>
 
 <b>Step 2.</b>&nbsp;&nbsp;Create the virtual environment and install dependencies:
 <pre>
@@ -120,13 +127,19 @@ python -m ipykernel install --user --name=3D-object-handling
 
 source 3D-object-handling/LINUX_INSTALLING_PACKAGES.sh
 </pre>
+<br>
 
-<b>Step 3.</b>&nbsp;&nbsp;Run the program:
+<b>Step 3.</b>&nbsp;&nbsp;Modify the changeable variables in <i>RS_and_3D_OD_constants.py</i>
+<br>
+<br>
+
+<b>Step 4.</b>&nbsp;&nbsp;Run the program:
 <pre>
 source 3D-object-handling/bin/activate  # activate the virtual environment on Linux
 
 source 3D-object-handling/LINUX_3D_OBJECT_HANDLING_APPLICATION.sh
 </pre>
+<br>
 
 <b>Optional step</b>&nbsp;&nbsp;Run the prototyping program with Jupyter Notebook:
 <pre>
