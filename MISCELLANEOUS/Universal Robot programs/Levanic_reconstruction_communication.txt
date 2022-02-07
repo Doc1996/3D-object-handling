@@ -1,0 +1,84 @@
+ Program
+   BeforeStart
+     Popup: Start program?
+     MoveJ
+       home_pose
+     sending_str≔""
+     received_float≔0
+     socket_state=socket_open("192.168.40.191", 34500)
+   Robot Program
+     Wait: 0.1
+     Call ReceiveStringData
+     If received_str≟"RECONSTRUCT"
+       Wait: 2.0
+       MoveJ
+         home_pose
+         Waypoint_1
+         Call SendRobotAndReceivePCData
+         Waypoint_2
+         Call SendRobotAndReceivePCData
+         Waypoint_3
+         Call SendRobotAndReceivePCData
+         Waypoint_4
+         Call SendRobotAndReceivePCData
+         Waypoint_5
+         Call SendRobotAndReceivePCData
+         Waypoint_6
+         Call SendRobotAndReceivePCData
+         home_pose
+       Call SendFinishedData
+     ElseIf received_str≟"HANDLE"
+       Call SendRobotData
+       Call ReceivePoseData
+       appr_trans_vec≔translation_vec
+       appr_rot_vec≔rotation_vec
+       Call SendRobotData
+       Call ReceivePoseData
+       grab_trans_vec≔translation_vec
+       grab_rot_vec≔rotation_vec
+       Call SendRobotData
+       Call ReceiveFloatData
+       gripper_width≔received_float
+       calc_grip_width≔(gripper_width*1000+23)/3.3
+       If appr_trans_vec[2]≥-0.02 and grab_trans_vec[2]≥-0.02
+         approach_pose≔p[appr_trans_vec[0],appr_trans_vec[1],appr_trans_vec[2],appr_rot_vec[0],appr_rot_vec[1],appr_rot_vec[2]]
+         grabbing_pose≔p[grab_trans_vec[0],grab_trans_vec[1],grab_trans_vec[2],grab_rot_vec[0],grab_rot_vec[1],grab_rot_vec[2]]
+         rq_move_and_wait_mm(calc_grip_width)
+         MoveL
+           approach_pose
+         MoveL
+           grabbing_pose
+         Gripper Close (1)
+         MoveL
+           approach_pose
+         MoveJ
+           auxiliary_pose
+           pallet_pose
+         rq_move_and_wait_mm(calc_grip_width)
+         Gripper Close (1)
+         MoveJ
+           auxiliary_pose
+           home_pose
+         Call SendFinishedData
+       Else
+         Popup: Approaching or grabbing height is lower than ground-level!
+   SendFinishedData
+     socket_send_string("FINISHED")
+   SendRobotData
+     socket_send_string("ROBOT READY")
+   SendRobotAndReceivePCData
+     socket_send_string("ROBOT READY")
+     received_pc≔socket_read_string()
+     Loop received_pc≠"PC READY"
+       received_pc≔socket_read_string()
+   ReceiveStringData
+     received_str≔socket_read_string()
+   ReceiveFloatData
+     rec_raw_float≔socket_read_ascii_float(1)
+     If rec_raw_float[0]≟1
+       received_float≔rec_raw_float[1]
+   ReceivePoseData
+     rec_raw_pose≔socket_read_ascii_float(6)
+     If rec_raw_pose[0]≟6
+       translation_vec≔[rec_raw_pose[1], rec_raw_pose[2], rec_raw_pose[3]]
+       rotation_vec≔[rec_raw_pose[4], rec_raw_pose[5], rec_raw_pose[6]]

@@ -1,0 +1,305 @@
+IZVOĐENJE PROGRAMA
+- program počinje tamo gdje se poziva int main(...) funkcija (ona je specifična te se za nju podatak koji se vraća ne
+  mora definirati, ali i može, kao return 0)
+- buildanje se sastoji od kompajliranja i linkanja svih fileova u projektu (C++ ne prepoznaje fileove kao takve, već
+  samo ono što je napisano u njima)
+- kompajliranje prevodi C++ kod jednog filea sa svim drugim fileovima includeanim u njemu (....cpp) u strojni kod
+  (....obj) tog filea
+- linkanje se kod buildanja izvodi nakon kompajliranja cijelog projekta te povezuje sve strojne kodove projekta
+  (....obj) te neke dodatne fileove u aplikacijski program tog projekta (....exe)
+- debug mode se koristi prije nego je program završen, jer dodaje neke linije da bi se kod kompajliranja provjerili
+  još neki uvjete, a release mode se koristi kad je program završen, jer ne dodaje te linije pa je kod optimiziran
+- klasična varijabla ili klasična funkcija se može koristiti samo na razini i ispod razine na kojoj je definirana
+  (ako je definirana na istoj razini kao i funkcija main, moći će se koristiti globalno u pripadnom fileu, a ako je
+  definirana unutar neke funkcije, moći će se koristiti lokalno samo u njoj), pri čemu joj se vrijednost briše kad se
+  dođe iznad razine na kojoj je definirana
+- statična varijabla ili statična funkcija je varijabla ili funkcija koja kod svoje definicije ispred tipa podatka
+  ima static te se može koristiti samo na razini i ispod razina na kojoj je definirana, pri čemu joj se vrijednost
+  zadržava i kad se dođe iznad razine na kojoj je definirana
+- eksterna varijabla ili eksterna funkcija je varijabla ili funkcija koja kod svoje deklaracije ispred tipa podatka
+  ima extern te se može koristiti globalno u cijelom projektu
+- debugira se tako da se izvođenje programa pauzira prije određenih linija, koje se označi klikom lijevo od njih
+- kod debugiranja se koristi pregled memorije, kojeg se pri izvođenju programa otvara s Debug --> Windows -->
+  Memory --> Memory 1 (ctrl+alt+M, 1), a u kojem se na memorijsku adresu određene varijable može doći upisivanjem
+  te varijable s & ispred nje (& označuje da se referira na nešto, tj. da se odnosi na memorijsku adresu nečega) ili
+  pointera na tu varijablu kod Address 
+- broj bajtova neke memorijske adrese odgovara broju bajtova aplikacije pretvorenih iz bitova (svaka memorijska
+  adresa aplikacije od 32 bita ima 4 bajta)
+- memorijske adrese su uvijek u heksadecimalnom zapisu (imaju 0x na početku), pri čemu dva znaka uvijek definiraju
+  jedan bajt
+- znak ; treba doći na kraju svake linije koda nakon koje ne dolazi {, osim nakon } na kraju if-ova, petlji, switch -
+  case-ova, definicija namespacea, definicija funkcija i definicija iznimaka, što znači da dolazi nakon } na kraju
+  definicija klasa, struktura i enumeracija)
+
+FUNKCIJE I HEADERI
+- funkcija se prije pozivanja mora ili definirati, pri čemu se tada ne mora uopće deklarirati, ili deklarirati, pri
+  čemu je tada svejedno gdje se definira u cijelom projektu
+- C++, kao ni C, ne podržava korištenje ugniježđenih funkcija, tj. sve funkcije se moraju definirati odvojeno na
+  istoj razini kao i funkcija main
+- ako funkcija ne vraća ništa, onda kod svoje definicije kao tip podatka koji vraća ima void
+- sve funkcije osim onih koje ne vraćaju ništa moraju imati barem jedan return ..., pri čemu funkcija koja ne vraća
+  ništa može, ali ne mora imati ni jedan return (ako ga ili ih ima, onda nakon njega ili njih ne dolazi nikakav
+  podatak)
+- return se u funkciji može nalaziti bilo gdje te se nakon njega izvođenje funkcije završava
+- ako funkcija u svojoj definiciji kao parametre koristi defaultne podatke, onda se oni pišu na kraju s pridjeljenom
+  defaultnom vrijednošću te se kod njenog pozivanja s istom ne moraju navoditi, dok se kod njenog pozivanja s nekom
+  drugom vrijednošću ili zapisuju s istom neovisno o poretku ili se navode samo iste poretkom kao i kod definicije
+- ako funkcija kod svog pozivanja koristi array, onda isti kao parametar u njenoj definiciji može biti naveden ili
+  tipom array ili tipom pointer
+- ako funkcija kod svog pozivanja koristi klasu, odnosno strukturu, onda se ista kao parametar u njenoj definiciji
+  navodi tipom klase, odnosno strukture
+- funkcije se mogu koristiti na način da se varijablama barata kao da su globalne, što se radi tako da funkcija pri
+  svom pozivu kao parametre koristi reference, a u svojoj definiciji pointere (vrij. pointera na referencu na neku
+  varijablu je zapravo vrijednost te iste varijable) ili, jednostavnije, da pri svom pozivu kao parametre koristi
+  originalne varijable, a u svojoj definiciji reference (to se koristi vrlo često kada se neke varijable žele
+  mijenjati)
+- ako se neku funkcija želi koristiti u fileu u kojem nije definirana, prije njenog korištenja mora je se deklarirati
+- deklaracija funkcije je prvi red definicije funkcije bez naziva parametara (tip podatka koji funkcija vraća, naziv
+  funkcije i tipove podataka koje funkcija koristi kao parametre), pri čemu osim ispuštanja naziva parametara ništa
+  drugo ne smije biti različito u odnosu na definiciju funkcije jer to tada nije ispravna funkcija
+- ako više funkcija ima isti naziv te različite brojeve i/ili tipove podataka koje koriste kao parametre, one su
+  različite te se to naziva overloadanjem funkcija, pri čemu tip podatka koji vraćaju nije bitan
+- analogno prethodno opisanome, ako više funkcija ima isti naziv te iste brojeve i tipove podataka koje koriste kao
+  parametre, njihova definicija nije ispravna (za metode kod klasa je to moguće te se naziva overrideanjem metoda),
+  pri čemu tip podatka koji vraćaju nije bitan
+- radnje koje će se izvršavati prije samog kompajliranja filea se nazivaju preprocesiranjem te se definiraju s #,
+  ključnom riječju iza njega i odgovarajućim podacima 
+- header file includea sav kod iz pripadnog filea u file gdje se koristi, da bi se deklariralo više funkcija odjednom
+- nakon #include se za standardne fileove VS-a, tj. libraryje koristi <naziv_libraryja>, a za header fileove tog
+  projekta "naziv_header_filea.h"  ili "naziv_header_filea.hpp" (prvi je header file za C-ov kod, a drugi za C++-ov
+  kod, pri čemu se može koristiti bilo koji)
+- nijedna funkcija u projektu ne smije biti definirana više od jedanput, zbog čega se header fileovi sastoje samo od
+  deklaracija funkcija, nipošto i od njihovih definicija (definicije funkcija se mogu kostiti za statične funkcije,
+  ali je bolje da se to ne radi), pri čemu se C++-ovi headeri mogu sastojati i od definicija klasa
+- C ne podržava korištenje klasa
+- da se u istom projektu kod includeanja više header fileova ne bi includealo više istih deklaracija funkcija, na
+  početku header filea se koristi #pragma once
+- bilo koja varijabla ili ključna riječ se na razini na kojoj je definirana i funkcija main može zamijeniti nekom
+  drugom #define nova_var stara_var
+
+NAMESPACEI i LIBRARYJI
+- namespacei se koristi za definiranje varijabli i funkcija određenog konteksta, tj. sadržaja nekih libraryja preko
+  namespace naziv_namespacea {...;}
+- using namespace naziv_namespacea; se koristi da se ispred bilo koje varijable ili funkcije korištene iz libraryjađ
+  koji koristi namespaceove ne mora pisati naziv_namespacea::, pri čemu se u istom fileu može koristiti više using
+  namespace naziv_namespacea, no bolje ih je uopće ne koristiti da se zna iz kojeg su libraryja koje varijable i
+  funkcije
+- ako se koriste samo neke var. ili funkcija libraryja koji koristi namespaceove, da se ispred njih ne piše naziv
+  njihovog libraryja, može se koristiti using naziv_namespacea::naziv_var; ili using naziv_namespacea::naziv_funkcije;
+- ugniježđeni namespacei se koriste s using naziv_prvog_namespacea::naziv_drugog_namespacea::...
+- jedan ili više namespacea se može preimenovati pridjeljivanjem varijable
+- C ne podržava korištenje namespacea
+- library za manipulaciju ulaznim i izlaznim podacima je <iostream> s namespaceom std
+- matematički library je <cmath> s namespaceom std i sadrži funkcije abs(...), acos(...), asin(...), atan(...)
+  cbrt(...) (kubni korijen), ceil(...), cos(...), cosh(...), exp(...), expm1(...) (eksp. funkcija minus 1), fabs(...)
+  (abs. vrij. dec. broja), fdim(..., ...) (poz. razlika dva broja), floor(...), hypot(..., ...),  fma(..., ..., ...)
+  (umnožak prvog i drugog broja zbrojen s trećim), fmax(..., ...), fmin(..., ...), fmod(..., ...), pow(..., ...),
+  sin(...), sinh(...), tan(...), tanh(...)
+- library za stringove je <string> s namespaceom std i ima ključnu riječ string za isti tip podatka, a sadrži
+  funkcije naziv_stringa.find(vrij_podstringa), naziv_stringa.insert((indeks_poč_ubacivanja, vrij_podstringa),
+  naziv_stringa.replace(indeks_poč_zamjene, duljina_podstringa_koji_se_miče, vrij_podstringa), naziv_stringa.clear()
+  i naziv_stringa.empty() obavljaju određene operacije sa stringovima
+- library za manipulaciju fileovima je <fstream> s namespaceom std, za njegovo korištenje se mora uključiti library
+  <iostream>, te za čitanje filea sadrži funkcije ifstream obj_filea_za_čitanje(path_filea) (za stvaranje objekta
+  filea za čitanje i njegovo otvaranje), obj_filea_za_čitanje >> ... (za čitanje pripadnog filea) i
+  obj_filea_za_čitanje.close() (za zatvaranje pripadnog filea), a za pisanje u file i njegovo stvaranje ako ne
+  postoji ofstream obj_filea_za_pisanje(path_filea) (za stvaranje objekta filea za pisanje i njegovo otvaranje),
+  obj_filea_za_pisanje << ... (za pisanje u pripadni file) i obj_filea_za_pisanje.close() (za zatvaranje pripadnog
+  filea)
+
+TIPOVI PODATAKA
+- osnovni tipovi podataka su bool (1 B) za logičke vrijednosti (kao parametar izračuna true/1/[bilo što osim false i
+  0] ili false/0, a kao rezultat izračuna 1 ili 0), char (1 B) za karaktere, short (2 B, +/-), int, (broj B ovisan o
+  procesoru, 4 B za veliku većinu procesora, +/-), long (4 B, +/-), long long (8 B, +/-), unsigned short (2 B, +),
+  unsigned int (4 B, +), unsigned long (4 B, +) i unsigned long long (8 B, +) za cijele brojeve te float (4 B, +/-, s
+  f nakon broja) i double (8 B, +/-) za decimalne brojeve
+- veličina tipa podatka u B se dobiva sa sizeof(tip_podatka)
+- varijable se pridjeljivanjem tipa podatka deklariraju s definiranjem (alocira im se mem. s bajtovima vrijednosti
+  cc), a pridjeljivanjem vrijednosti inicijaliziraju, pri čemu njihova deklaracija s definicijom i inicijalizacija
+  mogu, ali ne moraju biti izvedene u istoj liniji koda
+- samo deklaracija varijabli (ne alocira im se memorija) izvodi se pridjeljivanjem tipa podatka ispred kojeg stoji
+  extern, a može se napraviti jedino izvan main funkcije
+- izvan main funkcije se ne može inicijalizirati podatke odvojeno od njihove deklaracije s definicijom ili od njihove
+  deklaracije
+- svi podaci koje se izvan main funkcije (može i unutar header filea) ili samo deklarira ili deklarira s definiranjem
+  su globalni za cijeli projekt
+- varijable se, jednako kao i funkcije, definirati mogu samo jednom, a deklarirati se mogu više puta (deklariranje s
+  definiranjem se izvodi samo ako varijabla još nije definirana, a ako jest onda to odgovara samo deklariranju)
+- ako se treba deklarirati s definiranjem (i inicijalizirati) više varijabli istog tipa podatka, to se može izvesti u
+  jednoj liniji koda, odvajanjem varijabli (s pridjeljenim vrijednostima) zarezom
+- podatak tipa bool se može inicijalizirati istim onim uvjetom koji se koristi kod if funkcije
+- konstantan podatak kod deklaracije s definicijom ispred tipa podatka ima const te se u toj istoj liniji koda mora i
+  inicijalizirati, nakon čega se više ne može mijenjati (bilo koji podatak može biti konstantan, što znači da tu
+  spadaju i arrayevi i pointeri i reference)
+- array sadrži više podataka istog tipa (tipa je podatka kao i podaci unutar njega) te ga se definira s {...}
+  (zagrade moraju postojati i kad array sadrži samo jedan element), indeksira uglatim zagradama počevši od nule, a
+  deklaracije također uglatim zagradama nakon njegove varijable (uglate zagrade mogu biti ili prazne, pri čemu je
+  broj elemenata arraya jednak broju podataka unutar njega kod njegove inicijalizacije koja mora biti u istoj liniji
+  koda kao i deklaracija, ili s unaprijed određenim brojem elemenata arraya, koji ne moraju odgovarati broju podataka
+  unutar njega kod njegove inicijalizicije)
+- string se definira kao array chareva ili kao std::string iz libraryja prethodno uključenog sa #include <string>
+- array chareva kod definicije i indeksiranja koristi jedan element više nego što ima karaktera, tj. zadnji element
+  tog arraya je nul karakter (\0)
+- string definiran kao std::string se može spajati sa drugim stringovima preko operatora +, broj njegovih elemenata
+  se dobiva s naziv_stringa.length(); ili s naziv_stringa.size(); a njegovim elementima se pristupa (može ih se i
+  mijenjati) s naziv_stringa[indeks_elementa]
+- funkcija tolower(naziv_chara), odn. toupper(naziv_chara) kao parametar koristi podatak tipa char te ga, ako je on
+  slovo, vraća kao malo, odnosno veliko
+- funkcija atoi(naziv_stringa.c_str()), odn. atol(naziv_stringa.c_str()), odn. atof(naziv_stringa.c_str()) pretvara
+  string koji sadrži samo znamenke (te moguće i decimalnu točku) u evkivalentni integer, odn. long, odn. float
+- castanje varijable je promjena njenog tipa podatka, a izvodi se tako da se novoj varijabli s novim tipom podatka
+  pridjeli vrijednost starog tipa podatka s navođenjem istog u zagradama ispred te vrij. (npr. int broj = (short)12)
+- pointeri se deklariraju s definiranjem tako da u zapisu imaju tip podatka kao i podatak na koji se odnose, ali s *
+  nakon toga tipa podatka (tip podatka im je zapravo samo pointer)
+- pointeri su podaci čija je vrijednost jednaka memorijskoj adresi podatka na koji se odnose, tj. referenci tog
+  podatka, što se zapisuje pridjeljivanjem varijable podatka s & ispred nje (referenciranje pointera)
+- vrijednosti podatka na čiju se memorijsku adresu pointer odnosi se pristupa nazivom pointera s * ispred njega
+  (dereferenciranje pointera), pri čemu se kod korištenja takvog zapisa unutar nekog drugog, on uvijek stavlja u
+  zagrade (u suprotnom bi se dereferenciranje izvodilo tek nakon što se izvede ostatak izraza), pri čemu se promjena
+  te vrijednosti na opisani način zadržava i kod pristupanja njoj preko originalne varijable
+- reference se deklariraju s definiranjem, ali samo uz inicijalizaciju, što se zapisuje pridjeljivanjem varijable na
+  koju se odnose, tako da u zapisu imaju tip podatka kao i podatak na koji se odnose, ali s & nakon toga tipa podatka
+  (tip podatka im je zapravo samo referenca)
+- reference su podaci čija je vrijednost jednaka podatku određene varijable na koju se odnose
+- vrijednosti podatka varijable na koji se referenca odnosi se pristupa nazivom reference, pri čemu se promjena te
+  vrijednosti na opisani način zadržava i kod pristupanja njoj preko originalne varijable
+- pointeru se pripadna varijabla može mijenjati, dok se referenci ne može (referenca se uvijek odnosi na istu var.)
+- vrijednost pointera na referencu na neku varijablu (dereferenciranje referenciranog pointera) je zapravo vrijednost
+  te iste varijable
+- može se definirati pointer na pointer na neku varijablu (može i za više razine), ali kod deklaracije s definiranjem
+  mora u zapisu imati tip podatka kao i podatak na koji se originalni pointer odnosi, ali s ** nakon njega (za svaku
+  višu razinu je jedan * više)
+- ako pointer nije definiran, onda je njegova vrijednost jednaka nullptr, a ako jest, onda mu vrijednost mora biti
+  valjana memorijska adresa
+- pointer se briše s delete naziv_pointera, pri čemu prije toga mora biti deklariran s definiranjem i inicijaliziran
+- broj bajtova pointera odgovara broju bajtova memorijskih adresa, što odgovara broju bajtova aplikacije pretvorenih
+  iz bitova (svaka memorijska adresa aplikacije od 32 bita ima 4 B pa toliko bajtova u tom slučaju imaju i pointeri)
+
+UVJETI I TOK PROGRAMA
+- podaci tipa string se unose sa std::cin >> ...;, ... = std::cin.get() ili sa std::getline(std::cin, ...);, a
+  ispisuju sa std::cout << ... << std::endl;
+- funkciji std::endl odgovara izraz \n na kraju stringa
+- komentari u jednom retku se definiraju s //, a komentari u više redaka s /* na početku i */ na kraju komentara
+- if funkcija ima strukturu if - else if - else, s time da samo if treba postojati
+- if funkcija se u jednom retku može zapisati preko ternarnog operatora na način ... = (uvjet) ? izraz_za_true :
+  izraz_za_false;
+- do - while funkcija prvi put izvodi kod neovisno o uvjetu, a zatim provjerava uvjet kao while funkcija te se
+  definira sa do {...;} while (uvjet);, pri čemu se sav kod nalazi kod bloka do
+- for, while i do - while funkcije se nazivaju petljama, a kod se u sljedeću iteraciju može preskočiti s continue;,
+  dok se iteriranje može prekinuti s break;
+- switch - case funkcija izvodi kod za određenu vrijednost varijable te se definira sa switch(naziv_var)
+  {case vrij_1: ...; break; case vrij_2: ...; break; default: kod_default;}
+- bilo kakakv uvjet kod if, for, while, do - while ili switch - case funkcije mora biti unutar zagrada
+- bitwise operatori su & (binarni i), | (birarni ili), ^ (binarni XOR), ~ (binarni ne), << (binarni shift left) i >>
+  (binarni shift right) te se mogu koristiti samo s podacima tipa int i char
+- unarni aritmetički operatori su ++ i --
+- binarni aritmetički operatori su +, -, *, / (cjelobrojno dijeljenje), % (modul ili ostatak dijeljenja), ++ i --
+- relacijski operatori su ==, !=, >, >=, < i <=
+- logički operatori su && (i), || (ili) i ! (ne)
+- aritmetički operatori imaju prednost pred relacijskima, a oni prednost pred logičkima pa kod npr. x < 5*2 && x < 10
+  ne trebaju postojati zagrade između dijelova izraza
+
+KLASE
+- klase se definiraju s class naziv_kl {...;};, pri čemu se unutar vitičastih zagrada definiraju atributi (drugi 
+  naziv za varijable) i metode (drugi naziv za funkcije) klasa, na isti način kako se definiraju i standardno
+- modifikatori vidljivosti klasa služe da bi se zabranilo pristupanje atributima i metodama klasa ili dijelova klasa
+  za koje nije predviđeno da im se iz nečega može pristupiti te da bi se to jasno vidjelo iz samog koda
+- modifikatori vidljivosti klasa i dijelova klasa su private, protected i public, pri čemu su sve klase (čak i one
+  nasljeđene) defaultno privatne
+- modifikatori vidljivosti se za klase ili dijelove klasa mogu postaviti na bilo kojem dijelu unutar njihovih
+  vitičastih zagrada, s private:, protected: ili public: u posebnoj liniji koda, pri čemu vrijede sve do kraja
+  definicije klase ili do kad se u definiciji klase ih ne promijene neki drugi modifikatori
+- atributima i metodama klasa ili dijelova klasa koji su privatni mogu pristupati samo njihovi drugi atributi i
+  metode te atributi i metode klasa kojima su one označene kao friendovi
+- atirbutima i metodama klasa ili dijelova klasa koji su protektani mogu pristupati oni atributi i metode kao i kod
+  klasa ili dijelova klasa koji su privatni te atributi i metode svih klasa koje nasljeđuju navedenu klasu
+- atributima i metodama klasa ili dijelova klasa koji su javni mogu pristupati atributi i metode bilo kojih klasa
+  te atributi i funkcije bilo kojeg dijela koda nakon njihove definicije
+- klasa koja nasljeđuje neku drugu klasu je defaultno privatna, neovisno o tome kakve je vidljivosti bila ta druga
+  klasa ili njezini dijelovi
+- neka klasa, odnosno neka standardna funkcija može određenoj klasi biti označena kao prijateljska (određena klasa
+  joj daje jednostranu mogućnost pristupa svojim atributima i metodama) ako se unutar definicije određene klase na
+  početku napiše friend class naziv_prij_klase;, odnosno friend i deklaracija standardne funkcije s ; iza iste
+- ako metode klase koriste standarne varijable i atribute klase, kod njihove definicije se kao parametri koriste
+  samo standardne varijable, dok atributima klase uvijek mogu direktno pristupati
+- objekti klasa se instanciraju (deklariraju) s naziv_klase naziv_obj;
+- objekti klasa se nakon instanciranja mogu, ali ne moraju instancirati s naziv_obj = {vrij_atr_obj, ...};, pri čemu
+  se njihova inicijalizacija može napraviti u istoj liniji koda kao i instanciranje ili u nekoj drugoj
+- tip podatka objekta klase je naziv njegove klase
+- atributima objekta se pristupa s naziv_obj.naziv_atr_obj;, a metodama s naziv_obj.naziv_metode_obj(...);
+- ako neka varijabla ili metoda unutar klase kod svoje definicije ispred tipa podatka ima static, ona je zajednička
+  za sve objekte te klase, a vrijednost joj se zadržava i kad se izađe izvan klase kojoj pripada (takva upotreba
+  ključne riječi static kod klasa vrlo je slična njenoj upotrebi izvan klase)
+- atributima zajedničkim za sve obj. neke klase se pristupa s naziv_kl::naziv_atr_kl; ili naziv_obj.naziv_atr_kl;,
+  a metodama s naziv_kl::naziv_metode_kl(...); ili naziv_obj.naziv_metode_kl(...);
+- metode zajedničke za sve objekte neke klase mogu pristupati standardnim varijablama i atributima zajedničkim za sve
+  objekte te klase, tj. ne mogu pristupati atributima pojedinih objekata te klase
+- konstruktor je metoda klase koja se automatski poziva kod svakog instanc. objekta da bi se ti objekti uz instanc. i
+  inicijalizirali, a definira se bez tipa podatka koji vraća i bez returna kao
+  naziv_metode_obj_koji_odgovara_nazivu_kl(...) {...;}, pri čemu nakon njenog korištenja nije potrebno ručno
+  inicijaliziranje objekta
+- može postojati više konstruktora, čiji se definicija i pozivanje kod instaciranja objekata razlikuju prema broju
+  i/ili tipu podataka koje koriste kao parametre (overloadanje konstruktora)
+- destruktor je metoda klase koja se automatski poziva kod svakog brisanja objekta, bilo ručno bilo automatski
+  izlaskom iz funkcije u kojoj je bio instanciran, da bi ti se objekti uz brisanje i deinicijalizirali, tj. da bi se
+  oslobodila memorija koju su zauzimali, a definira se bez tipa podatka koji vraća i bez returna kao
+  ~naziv_metode_obj_koji_odgovara_nazivu_kl(...) {...;}, pri čemu nakon njenog korištenja nije potrebno ručno
+  deinicijaliziranje objekta
+- može postojati više destruktora, čiji se definicija i pozivanje kod instaciranja objekata razlikuju prema broju
+  i/ili tipu podataka koje koriste kao parametre (overloadanje destruktora)
+- enkapsulacija se odnosi indirektno pristupanje atributima klase postavljanjem atributa klase privatnim te
+  definiranjem javnih metoda koje postavljaju (setteri) ili vraćaju (getteri) navedene atribute, umjesto direktnog
+  pristupanja preko naziv_obj.naziv_atr_obj; koje često dovodi do slučajnih promjena i grešaka
+- klasa koja nasljeđuje od druge klase se definira s class naziv_potom_kl : modif_vidlj naziv_rodit_kl {...}; te
+  nasljeđuje samo javne i protektane atribute i metode, koje ako je modif_vidlj public ostaju iste, ako je protected
+  postaju protektane, a ako je private postaju privatne, pri čemu im se vidlj. kasnije ne može mijenjati
+- objekt nasljeđene klase je tipa podatka naziva njegove klase i svih klasa koje je naslijedio
+- metoda nasljeđene klase može imati isti naziv te različite, odnosno iste brojeve i tipove podataka koje koristi kao
+  parametre u odnosu na klasu od koje nasljeđuje te se to naziva overloadanjem, odnosno overrideanjem metode (uvijek
+  se najprije gleda postoji li navedena metoda kod nasljeđene klasa), pri čemu tip podatka koje vraća nije bitan (kod
+  standardnih funkcija overrrideanje nije moguće)
+- ako se kod postojanja overrideane metode želi koristiti ona metoda koja je definirana u klasi od koje druga klasa
+  nasljeđuje, onda se kod njenog poziva iza znaka ., a ispred njenog naziva mora dodati namespace navedene klase, tj.
+  naziv navedene klase s :: iza njega
+- C++ podržava višestruko nasljeđivanje, pri čemu se klasa koja nasljeđuje od više drugih klasa definira s
+  class naziv_potom_kl : modif_vidlj_prve naziv_prve_rodit_kl, modif_vidlj_druge naziv_druge_rodit_kl, ... {...;}; te
+  nasljeđuje atribute i metode na jednak način kao i kod standardnog nasljeđivanja
+- polimorfizam se odnosi na različitost metoda istog naziva i tipa podataka koje ista koristi kao parametre za klase
+  koje je nasljeđuju od neke roditeljske, što se postiže definiranjem te metode u roditeljskoj klasi te njenim
+  overrideanjem u klasama koje istu nasljeđuju
+- virtualne metode klasa se koriste kada sve klase koje nasljeđuju od roditeljske moraju moći koristiti metodu istog
+  naziva, a roditeljska klasa ju ne smije moći koristiti
+
+STRUKTURE
+- strukture i sva njihova svojstva su sintaktički ekvivalentne klasama, s razlikom da su defaultno javne, ne mogu
+  sakriti detalje svoje implementacije te koriste ključnu riječ struct umjesto class
+- razlika između struktura i klasa je u njihovom pretpostavljem načinu korištenja, tj. u njihovoj pretpost. semantici
+- razlog zbog kojeg C++ podržava klasa je u kompatibilnosti s C-om, tj. zato jer i C podržava klase
+- strukture je najbolje koristiti kao reprezentaciju skupa podataka različitih tipova koji nema određen kontekst, pri
+  čemu ih nije dobro koristiti kao reprezentaciju nečega što ima određen kontekst te nečega kod čega se javlja
+  koncept nasljeđivanja
+- struktura koja nasljeđuje neku drugu strukturu je defaultno javna, neovisno o tome kakve je vidljivosti bila ta
+  druga struktura ili njezini dijelovi
+
+ENUMERACIJE
+- enumeracija je skup podataka koji je grupiran te koji se koristi kada se tim nazivima žele reprezentirati neka
+  stanja
+- enumeracija je deaultno tipa podatka int te se definira s enum naziv_enuma {...}, pri čemu se unutar vitičastih
+  zagrada samo nabroje varijable bez tipa podatka i njihove prethodne definicije, odvojene zarezom
+- nabrojene varijable se ne moraju inicijalizirati, pri čemu je vrijednost prve varijable 0, a svake sljedeće za 1
+  veća, ali se i mogu
+- tip podatka enumeracije se može promijeniti tako da se nakon enum naziv_enuma zapiše kao : ...
+- elementi enumeracije se koriste tako da se pridjele nekoj varijabli koja je tipa podatka kao i naziv njihove
+  enumeracije, što osigurava da se toj varijabli ne mogu pridjeljivati neke druge vrijednosti
+- elementi emuneracije se mogu koristiti u uvjetima, tj. uspoređivati s bilo kojim podacima istog tipa kao što je i
+  tip enumeracije
+
+IZNIMKE
+- hvatanje iznimaka se definira sa try {...; throw naziv_iznimke;} catch(...) {...}, pri čemu se dio koda unutar
+  bloka try pokuša izvesti te ako se pojavi greška, u konzoli se ispiše navedena iznimka i izvede se dio koda unutar
+  bloka catch sa definiranim tipovima podataka koje koristi kao parametre i nazivima parametara
+
+DODATNO
+- char* buffer = new char[8]; stvara pointer buffer koji se odnosi na prvi element arraya od 8 chareva za koje je
+  alocirana memorija
+- memset(buffer, 0, 8); ispunjava 8 bajtova memorijske adrese varijable buffer s nulama

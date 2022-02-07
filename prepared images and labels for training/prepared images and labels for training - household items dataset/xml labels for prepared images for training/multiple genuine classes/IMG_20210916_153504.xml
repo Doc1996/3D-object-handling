@@ -1,0 +1,62 @@
+<annotation>
+	<folder>images</folder>
+	<filename>IMG_20210916_153504.jpg</filename>
+	<path>C:\Users\Korisnik\Desktop\SLIKE ZA CNN OD\prepared images being labeled - household items dataset\multiple genuine classes\images\IMG_20210916_153504.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Vindi Iso Sport Forest Strawberries 500mL</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>297</xmin>
+			<ymin>141</ymin>
+			<xmax>410</xmax>
+			<ymax>262</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Vindi Iso Sport Lemon-Grapefruit 500mL</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>220</xmin>
+			<ymin>176</ymin>
+			<xmax>333</xmax>
+			<ymax>306</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Nescafe Classic 225g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>277</xmin>
+			<ymin>227</ymin>
+			<xmax>392</xmax>
+			<ymax>336</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Gavrilovic Pork Liver Pate 100g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>308</xmin>
+			<ymin>139</ymin>
+			<xmax>363</xmax>
+			<ymax>193</ymax>
+		</bndbox>
+	</object>
+</annotation>

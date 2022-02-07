@@ -1,0 +1,73 @@
+instalira se Qt Creator sa MSVC kompajlerom
+
+
+instaliranje vcpkg-a i paketa za C++:
+
+napravi se folder C:/PROGRAMI/PackageManager/vcpkg i doda se u PATH (vcpkg)
+
+cd C:/PROGRAMI/PackageManager
+git clone https://github.com/Microsoft/vcpkg.git
+.\vcpkg\bootstrap-vcpkg.bat
+vcpkg integrate install
+vcpkg install pcl:x64-windows
+vcpkg install opencv:x64-windows
+vcpkg install realsense2:x64-windows
+vcpkg install eigen3:x64-windows
+
+
+dokument CMakeList.txt u folderu projekta vision_project:
+
+cmake_minimum_required(VERSION 3.5)
+
+project(Vision)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
+
+add_executable(${PROJECT_NAME}
+    main.cpp)
+
+include("C:/PROGRAMI/PackageManager/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+# Find Packages
+find_package(PCL REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(realsense2 REQUIRED)
+find_package(Eigen3 REQUIRED)
+
+# [C/C++]>[General]>[Additional Include Directories]
+include_directories(${PCL_INCLUDE_DIRS})
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+# [C/C++]>[Preprocessor]>[Preprocessor Definitions]
+add_definitions(${PCL_DEFINITIONS})
+
+# [Linker]>[General]>[Additional Library Directories]
+link_directories(${PCL_LIBRARY_DIRS})
+
+# [Linker]>[Input]>[Additional Dependencies]
+target_link_libraries(${PROJECT_NAME}
+    ${PCL_LIBRARIES}
+    ${OpenCV_LIBS}
+    ${realsense2_LIBRARY}
+    Eigen3::Eigen)
+
+
+projekt se u Qt builda samo za prototipiranje, sa odabranom Release konfiguracijom, a za deployanje se builda sa devenv
+
+
+buildanje projekta sa cmake i devenv:
+
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE se doda u PATH (devenv)
+
+cmake "C:/Users/Dominik/Documents/Qt/vision_project" -B "C:/Users/Dominik/Documents/Qt/vision_project/build"
+devenv "C:/Users/Dominik/Documents/Qt/vision_project/build/Vision.sln" /Build "Release|x64"
+
+
+buildanje projekta sa cmake i devenv preko skripte build_project.py:
+
+pip install pyinstaller
+
+cd "C:/Users/Dominik/Documents/Qt/vision_project" && pyinstaller --onefile build_project.py

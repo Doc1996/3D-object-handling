@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Nescafe Classic 225g</folder>
+	<filename>IMG_20210831_193013.jpg</filename>
+	<path>C:\Users\Korisnik\Desktop\CNN OBJECT DETECTION\prepared images and labels for training\prepared images and labels for training - household items dataset\prepared images for training\Nescafe Classic 225g\IMG_20210831_193013.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Nescafe Classic 225g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>242</xmin>
+			<ymin>156</ymin>
+			<xmax>296</xmax>
+			<ymax>195</ymax>
+		</bndbox>
+	</object>
+</annotation>

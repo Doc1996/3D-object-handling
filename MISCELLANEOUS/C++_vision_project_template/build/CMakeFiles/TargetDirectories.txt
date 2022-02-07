@@ -1,0 +1,3 @@
+C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/Vision.dir
+C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/ZERO_CHECK.dir

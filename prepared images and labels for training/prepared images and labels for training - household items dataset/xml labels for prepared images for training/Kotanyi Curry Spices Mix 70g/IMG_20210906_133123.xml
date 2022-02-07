@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Kotanyi Curry Spices Mix 70g</folder>
+	<filename>IMG_20210906_133123.jpg</filename>
+	<path>C:\Users\Marko\Desktop\CNN OBJECT DETECTION\prepared images and labels for training\prepared images and labels for training - household items dataset\prepared images for training\Kotanyi Curry Spices Mix 70g\IMG_20210906_133123.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Kotanyi Curry Spices Mix 70g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>262</xmin>
+			<ymin>120</ymin>
+			<xmax>318</xmax>
+			<ymax>241</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,10 @@
+^C:\USERS\DOMINIK\DOCUMENTS\QT\VISION_PROJECT\BUILD\CMAKEFILES\DCF280D8127BA3E6CB2E5BDDDA0C81AD\GENERATE.STAMP.RULE
+setlocal
+C:\PROGRAMI\CMake\bin\cmake.exe -SC:/Users/Dominik/Documents/Qt/vision_project -BC:/Users/Dominik/Documents/Qt/vision_project/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Dominik/Documents/Qt/vision_project/build/Vision.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

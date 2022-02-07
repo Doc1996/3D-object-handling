@@ -1,0 +1,55 @@
+#include <iostream>
+// #include <Eigen/Dense>
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <pcl/common/common.h>
+
+// using Eigen::MatrixXd;
+
+int main()
+{
+
+    /*
+    MatrixXd m(2,2);
+    m(0,0) = 3;
+    m(1,0) = 2.5;
+    m(0,1) = -1;
+    m(1,1) = m(1,0) + m(0,1);
+    std::cout << m << std::endl;
+    */
+
+    cv::namedWindow("raw", cv::WINDOW_AUTOSIZE);
+    cv::namedWindow("gray", cv::WINDOW_AUTOSIZE);
+    cv::namedWindow("canny", cv::WINDOW_AUTOSIZE);
+
+    cv::VideoCapture cap;
+    cap.open(0);
+
+    if (!cap.isOpened())
+    {
+        std::cerr << "Couldn't open capture." << std::endl;
+        return -1;
+    }
+
+    cv::UMat bgr_frame, gray, canny;
+
+    for (;;)
+    {
+        cap >> bgr_frame;
+        if (bgr_frame.empty()) break;
+
+        cv::imshow("raw", bgr_frame);
+
+        cv::cvtColor(bgr_frame, gray, cv::COLOR_BGR2GRAY);
+        cv::imshow("gray", gray);
+
+        cv::Canny(gray, canny, 10, 100, 3, true);
+        cv::imshow("canny", canny);
+
+        char c = cv::waitKey(10);
+        if (c == 27) break;
+    }
+
+    cap.release();
+    return 0;
+}

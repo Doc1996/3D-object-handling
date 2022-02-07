@@ -1,0 +1,62 @@
+<annotation>
+	<folder>images</folder>
+	<filename>IMG_20210916_160446.jpg</filename>
+	<path>C:\Users\User\Desktop\multiple genuine classes\images\IMG_20210916_160446.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Solana Pag Fine Sea Salt 250g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>202</xmin>
+			<ymin>130</ymin>
+			<xmax>299</xmax>
+			<ymax>263</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Vindi Iso Sport Forest Strawberries 500mL</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>333</xmin>
+			<ymin>181</ymin>
+			<xmax>417</xmax>
+			<ymax>347</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Barcaffe Classic Original 225g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>223</xmin>
+			<ymin>217</ymin>
+			<xmax>363</xmax>
+			<ymax>321</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Franck Black Currant Tea 60g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>267</xmin>
+			<ymin>136</ymin>
+			<xmax>404</xmax>
+			<ymax>237</ymax>
+		</bndbox>
+	</object>
+</annotation>

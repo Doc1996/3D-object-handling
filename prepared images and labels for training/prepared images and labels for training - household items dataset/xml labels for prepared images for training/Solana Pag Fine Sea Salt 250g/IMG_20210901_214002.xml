@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Solana Pag Fine Sea Salt 250g</folder>
+	<filename>IMG_20210901_214002.jpg</filename>
+	<path>C:\Users\Korisnik\Desktop\SLIKE ZA CNN OD - s obrisanim nepotrebnim\prepared images and labels for training - household items dataset\prepared images for training\Solana Pag Fine Sea Salt 250g\IMG_20210901_214002.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Solana Pag Fine Sea Salt 250g</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>227</xmin>
+			<ymin>205</ymin>
+			<xmax>350</xmax>
+			<ymax>275</ymax>
+		</bndbox>
+	</object>
+</annotation>

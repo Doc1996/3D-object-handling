@@ -1,0 +1,14 @@
+<annotation>
+	<folder>no genuine classes</folder>
+	<filename>IMG_20210824_002726.jpg</filename>
+	<path>C:\Users\Korisnik\Desktop\object detection project\images and labels\images and labels - household items dataset\prepared images\no genuine classes\IMG_20210824_002726.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

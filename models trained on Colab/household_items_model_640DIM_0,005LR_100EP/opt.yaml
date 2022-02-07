@@ -1,0 +1,37 @@
+weights: ./runs/train/household_items_model_640DIM_0,005LR_100EP4/weights/last.pt
+cfg: ''
+data: /content/drive/My Drive/CNN OBJECT DETECTION/YOLO v5/data/household_items_config.yaml
+hyp: /content/drive/My Drive/CNN OBJECT DETECTION/YOLO v5/data/hyps/household_items_hyps.yaml
+epochs: 100
+batch_size: 64
+imgsz: 640
+rect: false
+resume: true
+nosave: false
+noval: false
+noautoanchor: false
+evolve: null
+bucket: ''
+cache: ram
+image_weights: false
+device: ''
+multi_scale: false
+single_cls: false
+adam: false
+sync_bn: false
+workers: 8
+entity: null
+project: runs/train
+name: household_items_model_640DIM_0,005LR_100EP
+exist_ok: false
+quad: false
+linear_lr: false
+label_smoothing: 0.0
+upload_dataset: false
+bbox_interval: -1
+save_period: -1
+artifact_alias: latest
+local_rank: -1
+freeze: 0
+patience: 100
+save_dir: runs/train/household_items_model_640DIM_0,005LR_100EP4

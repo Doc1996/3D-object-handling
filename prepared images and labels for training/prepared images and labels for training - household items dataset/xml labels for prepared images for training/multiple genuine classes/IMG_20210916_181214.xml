@@ -1,0 +1,38 @@
+<annotation>
+	<folder>images</folder>
+	<filename>IMG_20210916_181214.jpg</filename>
+	<path>C:\Users\User\Desktop\multiple genuine classes\images\IMG_20210916_181214.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Vindi Iso Sport Forest Strawberries 500mL</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>235</xmin>
+			<ymin>156</ymin>
+			<xmax>454</xmax>
+			<ymax>270</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Vindi Iso Sport Lemon-Grapefruit 500mL</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>180</xmin>
+			<ymin>211</ymin>
+			<xmax>402</xmax>
+			<ymax>324</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3662A04F-1E4F-3200-BD92-38AD6C5809F6}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>Vision</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vision.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vision</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vision.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vision</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Vision.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Vision</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Vision.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Vision</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_segmentationd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_surfaced.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_keypointsd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_trackingd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_recognitiond.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_stereod.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\boost_system-vc140-mt-gd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\boost_filesystem-vc140-mt-gd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\boost_date_time-vc140-mt-gd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\boost_iostreams-vc140-mt-gd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\boost_regex-vc140-mt-gd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_highguid.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_mld.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_objdetectd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_photod.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_stitchingd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_videod.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_videoiod.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\realsense2d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_mld.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_registrationd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_featuresd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_filtersd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_sample_consensusd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_searchd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_kdtreed.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_iod.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_octreed.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\pcl_commond.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\flann_cppd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\lz4d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_imgcodecsd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_calib3dd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_dnnd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_features2dd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_flannd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_imgprocd.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\debug\lib\opencv_cored.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Dominik/Documents/Qt/vision_project/build/Debug/Vision.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Dominik/Documents/Qt/vision_project/build/Debug/Vision.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_segmentation.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_surface.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_keypoints.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_tracking.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_recognition.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_stereo.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_highgui.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_ml.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_objdetect.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_photo.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_stitching.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_video.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_videoio.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\realsense2.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_ml.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_registration.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_features.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_filters.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_sample_consensus.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_search.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_kdtree.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_io.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_octree.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_common.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\flann_cpp.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\lz4.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_imgcodecs.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_calib3d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_dnn.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_features2d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_flann.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_imgproc.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Dominik/Documents/Qt/vision_project/build/Release/Vision.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Dominik/Documents/Qt/vision_project/build/Release/Vision.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_segmentation.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_surface.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_keypoints.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_tracking.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_recognition.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_stereo.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_highgui.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_ml.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_objdetect.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_photo.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_stitching.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_video.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_videoio.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\realsense2.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_ml.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_registration.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_features.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_filters.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_sample_consensus.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_search.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_kdtree.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_io.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_octree.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_common.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\flann_cpp.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\lz4.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_imgcodecs.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_calib3d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_dnn.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_features2d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_flann.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_imgproc.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Dominik/Documents/Qt/vision_project/build/MinSizeRel/Vision.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Dominik/Documents/Qt/vision_project/build/MinSizeRel/Vision.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;DISABLE_PNG;DISABLE_QHULL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\include\eigen3;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\..\..\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_segmentation.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_surface.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_keypoints.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_tracking.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_recognition.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_stereo.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_highgui.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_ml.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_objdetect.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_photo.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_stitching.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_video.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_videoio.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\realsense2.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_ml.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_registration.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_features.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_filters.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_sample_consensus.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_search.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_kdtree.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_io.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_octree.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\pcl_common.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\flann_cpp.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\lz4.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_imgcodecs.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_calib3d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_dnn.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_features2d.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_flann.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_imgproc.lib;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\lib\opencv_core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Dominik/Documents/Qt/vision_project/build/RelWithDebInfo/Vision.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Dominik/Documents/Qt/vision_project/build/RelWithDebInfo/Vision.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Dominik\Documents\Qt\vision_project\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Dominik/Documents/Qt/vision_project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\PROGRAMI\CMake\bin\cmake.exe -SC:/Users/Dominik/Documents/Qt/vision_project -BC:/Users/Dominik/Documents/Qt/vision_project/build --check-stamp-file C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeFindDependencyMacro.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindBoost.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPkgConfig.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\boost\vcpkg-cmake-wrapper.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindEigen.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindFLANN.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Dominik/Documents/Qt/vision_project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\PROGRAMI\CMake\bin\cmake.exe -SC:/Users/Dominik/Documents/Qt/vision_project -BC:/Users/Dominik/Documents/Qt/vision_project/build --check-stamp-file C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeFindDependencyMacro.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindBoost.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPkgConfig.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\boost\vcpkg-cmake-wrapper.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindEigen.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindFLANN.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Dominik/Documents/Qt/vision_project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\PROGRAMI\CMake\bin\cmake.exe -SC:/Users/Dominik/Documents/Qt/vision_project -BC:/Users/Dominik/Documents/Qt/vision_project/build --check-stamp-file C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeFindDependencyMacro.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindBoost.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPkgConfig.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\boost\vcpkg-cmake-wrapper.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindEigen.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindFLANN.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Dominik/Documents/Qt/vision_project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\PROGRAMI\CMake\bin\cmake.exe -SC:/Users/Dominik/Documents/Qt/vision_project -BC:/Users/Dominik/Documents/Qt/vision_project/build --check-stamp-file C:/Users/Dominik/Documents/Qt/vision_project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeFindDependencyMacro.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindBoost.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\FindPkgConfig.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\PROGRAMI\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\boost\vcpkg-cmake-wrapper.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\flann\flann-targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\lz4\lz4-config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig-version.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\opencv\OpenCVModules.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindEigen.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\Modules\FindFLANN.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\pcl\PCLConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfig.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\qhull\QhullTargets.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Config.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2ConfigVersion.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-debug.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets-release.cmake;C:\PROGRAMI\PackageManager\vcpkg\installed\x64-windows\share\realsense2\realsense2Targets.cmake;C:\PROGRAMI\PackageManager\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Dominik\Documents\Qt\vision_project\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Dominik\Documents\Qt\vision_project\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Dominik\Documents\Qt\vision_project\build\ZERO_CHECK.vcxproj">
+      <Project>{9463570E-B8B1-3BB2-9662-13657A3D9414}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
