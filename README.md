@@ -64,21 +64,26 @@
 
 <b>Step 1.</b>&nbsp;&nbsp;Clone the repository:
 <pre>
+cd %HOMEPATH%
+
 git clone https://github.com/Doc1996/3D-object-handling
 </pre>
 <br>
 
 <b>Step 2.</b>&nbsp;&nbsp;Create the virtual environment and install dependencies:
 <pre>
-python -m venv 3D-object-handling
-.\3D-object-handling\Scripts\activate  &:: activate the virtual environment on Windows
+cd %HOMEPATH%\3D-object-handling
 
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
+python3 -m pip install --user virtualenv
 
-pip install ipykernel
-python -m ipykernel install --user --name=3D-object-handling
+python3 -m venv python-virtual-environment
+.\python-virtual-environment\Scripts\activate
 
-.\3D-object-handling\WINDOWS_INSTALLING_PACKAGES.bat
+python3 -m pip install ipykernel
+python3 -m ipykernel install --user --name=3D-object-handling
+
+.\WINDOWS_INSTALLING_PACKAGES.bat
 </pre>
 <br>
 
@@ -88,18 +93,22 @@ python -m ipykernel install --user --name=3D-object-handling
 
 <b>Step 4.</b>&nbsp;&nbsp;Run the program:
 <pre>
-.\3D-object-handling\Scripts\activate  &:: activate the virtual environment on Windows
+cd %HOMEPATH%\3D-object-handling
 
-.\3D-object-handling\WINDOWS_3D_OBJECT_HANDLING_APPLICATION.bat
+.\python-virtual-environment\Scripts\activate
+
+.\WINDOWS_3D_OBJECT_HANDLING_APPLICATION.bat
 </pre>
 <br>
 
 <b>Optional step</b>&nbsp;&nbsp;Run the prototyping program with Jupyter Notebook:
 <pre>
-.\3D-object-handling\Scripts\activate  &:: activate the virtual environment on Windows
+cd %HOMEPATH%\3D-object-handling
 
-jupyter notebook 3D-object-handling\RS_and_3D_OD_prototypes.ipynb
-:: set the vitrual environment kernel: "Kernel" -> "Change kernel" -> "3D-object-handling"
+.\python-virtual-environment\Scripts\activate
+
+jupyter notebook RS_and_3D_OD_prototypes.ipynb
+:: set the virtual environment kernel: "Kernel" -> "Change kernel" -> "3D-object-handling"
 :: run cells one after another
 </pre>
 <br>
@@ -111,21 +120,26 @@ jupyter notebook 3D-object-handling\RS_and_3D_OD_prototypes.ipynb
 
 <b>Step 1.</b>&nbsp;&nbsp;Clone the repository:
 <pre>
+cd $HOME
+
 git clone https://github.com/Doc1996/3D-object-handling
 </pre>
 <br>
 
 <b>Step 2.</b>&nbsp;&nbsp;Create the virtual environment and install dependencies:
 <pre>
-python -m venv 3D-object-handling
-source 3D-object-handling/bin/activate  # activate the virtual environment on Linux
+cd $HOME/3D-object-handling
 
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
+python3 -m pip install --user virtualenv
 
-pip install ipykernel
-python -m ipykernel install --user --name=3D-object-handling
+python3 -m venv python-virtual-environment
+source python-virtual-environment/bin/activate
 
-source 3D-object-handling/LINUX_INSTALLING_PACKAGES.sh
+python3 -m pip install ipykernel
+python3 -m ipykernel install --user --name=3D-object-handling
+
+source LINUX_INSTALLING_PACKAGES.sh
 </pre>
 <br>
 
@@ -135,17 +149,21 @@ source 3D-object-handling/LINUX_INSTALLING_PACKAGES.sh
 
 <b>Step 4.</b>&nbsp;&nbsp;Run the program:
 <pre>
-source 3D-object-handling/bin/activate  # activate the virtual environment on Linux
+cd $HOME/3D-object-handling
 
-source 3D-object-handling/LINUX_3D_OBJECT_HANDLING_APPLICATION.sh
+source python-virtual-environment/bin/activate
+
+source LINUX_3D_OBJECT_HANDLING_APPLICATION.sh
 </pre>
 <br>
 
 <b>Optional step</b>&nbsp;&nbsp;Run the prototyping program with Jupyter Notebook:
 <pre>
-source 3D-object-handling/bin/activate  # activate the virtual environment on Linux
+cd $HOME/3D-object-handling
 
-jupyter notebook 3D-object-handling/RS_and_3D_OD_prototypes.ipynb
-# set the vitrual environment kernel: "Kernel" -> "Change kernel" -> "3D-object-handling"
+source python-virtual-environment/bin/activate
+
+jupyter notebook RS_and_3D_OD_prototypes.ipynb
+# set the virtual environment kernel: "Kernel" -> "Change kernel" -> "3D-object-handling"
 # run cells one after another
 </pre>
