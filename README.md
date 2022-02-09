@@ -74,14 +74,14 @@ git clone https://github.com/Doc1996/3D-object-handling
 <pre>
 cd %HOMEPATH%\3D-object-handling
 
-python3 -m pip install --upgrade pip
-python3 -m pip install --user virtualenv
+python -m pip install --upgrade pip
+python -m pip install --user virtualenv
 
-python3 -m venv python-virtual-environment
+python -m venv python-virtual-environment
 .\python-virtual-environment\Scripts\activate
 
-python3 -m pip install ipykernel
-python3 -m ipykernel install --user --name=3D-object-handling
+python -m pip install ipykernel
+python -m ipykernel install --user --name=3D-object-handling
 
 .\WINDOWS_INSTALLING_PACKAGES.bat
 </pre>
