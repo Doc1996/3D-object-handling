@@ -8,9 +8,6 @@ python3 --version
 pip --version
 nvcc --version
 
-python3 -m pip install --upgrade pip
-python3 -m pip cache purge
-
 python3 -m pip install numpy
 python3 -m pip install scipy
 
