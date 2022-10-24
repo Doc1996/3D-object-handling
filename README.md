@@ -13,48 +13,48 @@
 
 <b>Step 1.</b>&nbsp;&nbsp;Creating the dataset
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/creating%20dataset.jpg" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/creating%20dataset.jpg" width="640px"></p>
 <br>
 
 <b>Step 2.</b>&nbsp;&nbsp;Labeling the dataset
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/labeling%20dataset.png" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/labeling%20dataset.png" width="540px"></p>
 <br>
 
 <b>Step 3.</b>&nbsp;&nbsp;Training the YOLO v5 neural network on labeled dataset
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/training%20neural%20network.png" width="420px"></p>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/detection%20with%20neural%20network.jpg" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/training%20neural%20network.png" width="540px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/detection%20with%20neural%20network.jpg" width="640px"></p>
 <br>
 
 <b>Step 4.</b>&nbsp;&nbsp;Retrieving the pointcloud of scene from 3D camera and robot
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/retrieved%20pointcloud.png" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/retrieved%20pointcloud.png" width="480px"></p>
 <br>
 
 <b>Step 5.</b>&nbsp;&nbsp;Filtering the pointcloud of scene
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/filtered%20pointcloud.png" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/filtered%20pointcloud.png" width="480px"></p>
 <br>
 
 <b>Step 6.</b>&nbsp;&nbsp;Isolating the pointcloud of object
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/isolated%20pointcloud.png" width="240px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/isolated%20pointcloud.png" width="280px"></p>
 <br>
 
 <b>Step 7.</b>&nbsp;&nbsp;Defining the positions for object handling
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/positions%20for%20handling.png" width="360px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/positions%20for%20handling.png" width="400px"></p>
 <br>
 
 <b>Step 8.</b>&nbsp;&nbsp;Visualizing the object handling
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/visualized%20handling.png" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/visualized%20handling.png" width="480px"></p>
 <br>
 
 <b>Step 9.</b>&nbsp;&nbsp;Handling the object with robot
 <br>
-<p align="center"><img src="/MISCELLANEOUS/images%20for%20GitHub/handling%20with%20robot.jpg" width="420px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/handling%20with%20robot.jpg" width="600px"></p>
 <br>
 
 
