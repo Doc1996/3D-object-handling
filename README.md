@@ -18,7 +18,7 @@
 
 <b>Step 2.</b>&nbsp;&nbsp;Labeling the dataset
 <br>
-<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/labeling%20dataset.png" width="540px"></p>
+<p align="center"><img src="MISCELLANEOUS/images%20for%20GitHub/labeling%20dataset.png" width="580px"></p>
 <br>
 
 <b>Step 3.</b>&nbsp;&nbsp;Training the YOLO v5 neural network on labeled dataset
